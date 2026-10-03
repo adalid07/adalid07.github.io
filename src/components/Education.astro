@@ -1,0 +1,46 @@
+---
+import profile from '../data/profile.json';
+import { ui, type Lang } from '../lib/i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = ui[lang];
+---
+
+<section id="education" class="section">
+  <div class="container split">
+    <h2 class="section__title">{t.educationTitle}</h2>
+    <div class="stack">
+      <ul class="entries">
+        {
+          profile.education.map((e) => (
+            <li>
+              <p class="entry__title">{e.title[lang]}</p>
+              <p class="entry__meta">
+                {e.school} · {e.period}
+              </p>
+            </li>
+          ))
+        }
+      </ul>
+      <div>
+        <h3 class="subtitle">{t.certificationsTitle}</h3>
+        <ul class="entries">
+          {
+            profile.certifications.map((c) => (
+              <li>
+                <p class="entry__title">{c.name}</p>
+                <p class="entry__meta">
+                  {c.issuer} · {c.year}
+                </p>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

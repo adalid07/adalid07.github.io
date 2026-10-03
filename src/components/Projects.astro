@@ -1,0 +1,44 @@
+---
+import profile from '../data/profile.json';
+import { getGithubProjects } from '../lib/github';
+import { ui, type Lang } from '../lib/i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = ui[lang];
+const featured = profile.featuredProjects;
+const repos = await getGithubProjects();
+---
+
+<section id="projects" class="section">
+  <div class="container stack stack--lg">
+    <h2 class="section__title">{t.projectsTitle}</h2>
+    <ul class="cards">
+      {
+        featured.map((p) => (
+          <li class="card project">
+            <p class="tag">{p.tag[lang]}</p>
+            <h3 class="project__title">{p.title[lang]}</h3>
+            <p class="muted">{p.description[lang]}</p>
+          </li>
+        ))
+      }
+      {
+        repos.map((r) => (
+          <li class="card project">
+            <p class="tag">GitHub{r.language ? ` · ${r.language}` : ''}</p>
+            <h3 class="project__title">
+              <a href={r.url} rel="noopener">
+                {r.name}
+              </a>
+            </h3>
+            <p class="muted">{r.description ?? ''}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>

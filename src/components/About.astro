@@ -1,0 +1,32 @@
+---
+import profile from '../data/profile.json';
+import { ui, type Lang } from '../lib/i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = ui[lang];
+---
+
+<section id="about" class="section">
+  <div class="container split">
+    <h2 class="section__title">{t.aboutTitle}</h2>
+    <div class="stack">
+      <p class="prose">{profile.summary[lang]}</p>
+      <div class="skills">
+        {
+          profile.skills.map((group) => (
+            <div class="skill-group">
+              <h3 class="skill-group__title">{group.group[lang]}</h3>
+              <ul class="chips">
+                {group.items.map((item) => <li class="chip">{item}</li>)}
+              </ul>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

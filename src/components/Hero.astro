@@ -1,0 +1,45 @@
+---
+import profile from '../data/profile.json';
+import { ui, type Lang } from '../lib/i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = ui[lang];
+const latestEducation = profile.education[0];
+
+const facts = [
+  { k: t.cardLocation, v: profile.location[lang] },
+  { k: t.cardEducation, v: `${latestEducation.title[lang]} · ${latestEducation.school}` },
+  { k: t.cardLanguages, v: profile.languages.map((l) => `${l.name[lang]} (${l.level[lang]})`).join(' · ') },
+];
+---
+
+<section class="hero">
+  <div class="container hero__grid">
+    <div class="hero__text">
+      <p class="eyebrow">{profile.eyebrow[lang]}</p>
+      <h1>{profile.headline[lang]}</h1>
+      <p class="lead">{profile.lead[lang]}</p>
+      <div class="actions">
+        <a class="btn btn--primary" href="#projects">{t.viewProjects}</a>
+        <a class="btn btn--ghost" href="#contact">{t.getInTouch}</a>
+      </div>
+    </div>
+    <div class="card facts">
+      <p class="facts__title">{t.cardTitle}</p>
+      <dl>
+        {
+          facts.map((f) => (
+            <div class="facts__row">
+              <dt>{f.k}</dt>
+              <dd>{f.v}</dd>
+            </div>
+          ))
+        }
+      </dl>
+    </div>
+  </div>
+</section>

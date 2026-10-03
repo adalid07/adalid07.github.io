@@ -1,0 +1,41 @@
+---
+import profile from '../data/profile.json';
+import { languages, ui, type Lang } from '../lib/i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = ui[lang];
+---
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="brand" href={`/${lang}/`}>
+      <span class="brand__mark" aria-hidden="true"></span>
+      <span>{profile.name}</span>
+    </a>
+    <nav class="site-nav" aria-label={t.navLabel}>
+      <a href="#about">{t.navAbout}</a>
+      <a href="#experience">{t.navExperience}</a>
+      <a href="#projects">{t.navProjects}</a>
+      <a href="#contact">{t.navContact}</a>
+    </nav>
+    <div class="lang-switch" role="group" aria-label={t.langLabel}>
+      {
+        languages.map((l) => (
+          <a
+            class="lang-switch__link"
+            href={`/${l}/`}
+            hreflang={l}
+            lang={l}
+            aria-current={l === lang ? 'true' : undefined}
+          >
+            {l.toUpperCase()}
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</header>

@@ -1,0 +1,250 @@
+{
+  "name": "Adalid Claure G.",
+  "fullName": "Adalid Claure Galindo",
+  "accent": "#5eead4",
+  "location": { "es": "Madrid, España", "en": "Madrid, Spain" },
+  "eyebrow": {
+    "es": "DevSecOps · Seguridad de software · Criptografía post-cuántica",
+    "en": "DevSecOps · Software security · Post-quantum cryptography"
+  },
+  "headline": {
+    "es": "Seguridad aplicada, de la teoría al pipeline.",
+    "en": "Applied security, from theory to pipeline."
+  },
+  "lead": {
+    "es": "Trabajo en seguridad de software desde Madrid. Convierto marcos y normativas en controles automatizados y pruebas que se ejecutan en cada commit.",
+    "en": "I work in software security from Madrid. I turn frameworks and regulations into automated controls and tests that run on every commit."
+  },
+  "summary": {
+    "es": "Más de 7 años de experiencia en el ciclo de vida del software (SDLC), desde QA y automatización hasta DevSecOps y criptografía post-cuántica. He trabajado con aplicaciones cloud, web, desktop, móviles y empresariales, con foco en calidad, seguridad y accesibilidad.",
+    "en": "Over 7 years of experience across the software development lifecycle (SDLC), from QA and automation to DevSecOps and post-quantum cryptography. I have worked on cloud, web, desktop, mobile and enterprise applications, with a focus on quality, security and accessibility."
+  },
+  "links": {
+    "github": "https://github.com/adalid07",
+    "linkedin": "https://www.linkedin.com/in/adalid-claure-aa3bb1146/",
+    "email": "adalid.claureg@gmail.com"
+  },
+  "experience": [
+    {
+      "company": "Utimaco Iberia",
+      "role": {
+        "es": "Senior Security Software Quality Engineering",
+        "en": "Senior Security Software Quality Engineering"
+      },
+      "start": "2026-07",
+      "end": null,
+      "highlights": {
+        "es": [
+          "Implementación y validación de los algoritmos post-cuánticos ML-KEM y ML-DSA, estandarizados por NIST.",
+          "Diseño y automatización de suites de pruebas criptográficas con Python, Java, C y C++, integradas en CI/CD.",
+          "Pruebas de penetración internas y gestión de vulnerabilidades en dispositivos HSM a lo largo del SDLC.",
+          "Security Champion del equipo de desarrollo: promoción de prácticas de código seguro."
+        ],
+        "en": [
+          "Implementation and validation of the NIST-standardized post-quantum algorithms ML-KEM and ML-DSA.",
+          "Design and automation of cryptographic test suites with Python, Java, C and C++, integrated into CI/CD.",
+          "Internal penetration testing and vulnerability management for HSM devices across the SDLC.",
+          "Security Champion in the development team, promoting secure coding practices."
+        ]
+      }
+    },
+    {
+      "company": "Decathlon",
+      "role": {
+        "es": "Cybersecurity Engineer",
+        "en": "Cybersecurity Engineer"
+      },
+      "start": "2026-01",
+      "end": "2026-05",
+      "highlights": {
+        "es": [
+          "Rol DevSecOps para implantar un S-SDLC (ciclo de vida de desarrollo seguro) junto a los equipos de desarrollo.",
+          "Creación de un Centro de Excelencia y de un programa de Security Champions para extender la cultura de seguridad.",
+          "Gestión de hallazgos SAST y SCA con WIZ y Snyk; DAST con OWASP ZAP en Docker, integrado en CI/CD y con exportación a Jira.",
+          "Ajuste de reglas WAF en Cloudflare y coordinación de la remediación tras pruebas de penetración externas.",
+          "Análisis de riesgos con la metodología Pilar."
+        ],
+        "en": [
+          "DevSecOps role implementing an S-SDLC (secure development lifecycle) together with development teams.",
+          "Built a Center of Excellence and a Security Champions program to spread security culture.",
+          "Managed SAST and SCA findings with WIZ and Snyk; DAST with OWASP ZAP in Docker, integrated into CI/CD with export to Jira.",
+          "Tuned WAF rules in Cloudflare and coordinated remediation after external penetration tests.",
+          "Risk analysis using the Pilar methodology."
+        ]
+      }
+    },
+    {
+      "company": "Nice CXone",
+      "role": {
+        "es": "Senior Software QA / Security Tester",
+        "en": "Senior Software QA / Security Tester"
+      },
+      "start": "2022-02",
+      "end": "2025-10",
+      "highlights": {
+        "es": [
+          "Liderazgo de equipos de QA ágiles, integrando escaneos de seguridad estáticos y dinámicos en el SDLC (Veracode, Rapid7, Black Duck).",
+          "Automatización E2E con Playwright, reduciendo el tiempo de las pruebas de regresión.",
+          "Evaluaciones de accesibilidad conformes a WCAG y auditorías de seguridad basadas en NIST e ISO 27001.",
+          "Formación y mentoría en pruebas de seguridad (Burp Suite, Veracode, Rapid7) y talleres sobre inyección de código malicioso."
+        ],
+        "en": [
+          "Led agile QA teams, integrating static and dynamic security scans into the SDLC (Veracode, Rapid7, Black Duck).",
+          "E2E automation with Playwright, reducing regression testing time.",
+          "WCAG-compliant accessibility assessments and security audits based on NIST and ISO 27001.",
+          "Training and mentoring in security testing (Burp Suite, Veracode, Rapid7) and workshops on malicious code injection."
+        ]
+      }
+    },
+    {
+      "company": "Nice InContact",
+      "role": {
+        "es": "Mid Software QA / Security Testing",
+        "en": "Mid Software QA / Security Testing"
+      },
+      "start": "2019-10",
+      "end": "2022-07",
+      "highlights": {
+        "es": [
+          "Escaneos de vulnerabilidades con SQLmap, Burp Suite, Veracode (SAST) y Rapid7 (DAST).",
+          "Punto de contacto interno de pruebas de penetración y refuerzo de seguridad según OWASP Top 10.",
+          "Gestión de releases de QA con cobertura de regresión, smoke y sanity; automatización con Java y Serenity BDD y pruebas de API con Postman."
+        ],
+        "en": [
+          "Vulnerability scanning with SQLmap, Burp Suite, Veracode (SAST) and Rapid7 (DAST).",
+          "Internal point of contact for penetration testing and security hardening under OWASP Top 10.",
+          "QA release management with regression, smoke and sanity coverage; automation with Java and Serenity BDD and API testing with Postman."
+        ]
+      }
+    },
+    {
+      "company": "Digital Harbor International",
+      "role": {
+        "es": "Junior Software Manual Tester",
+        "en": "Junior Software Manual Tester"
+      },
+      "start": "2017-02",
+      "end": "2019-10",
+      "highlights": {
+        "es": [
+          "Diseño y ejecución de pruebas manuales y de integración con TestLink, Jira y Confluence.",
+          "Automatización con TestNG, Selenium, Jasmine, Protractor y Serenity BDD.",
+          "Colaboración con desarrolladores para validar correcciones y definir planes de prueba y criterios de aceptación."
+        ],
+        "en": [
+          "Designed and executed manual and integration tests with TestLink, Jira and Confluence.",
+          "Automation with TestNG, Selenium, Jasmine, Protractor and Serenity BDD.",
+          "Worked with developers to validate fixes and define test plans and acceptance criteria."
+        ]
+      }
+    }
+  ],
+  "education": [
+    {
+      "title": {
+        "es": "Máster en Seguridad de las TIC",
+        "en": "Master's Degree in Information & Communications Technology Security"
+      },
+      "school": "Universidad Europea de Madrid",
+      "period": "2025 – 2026"
+    },
+    {
+      "title": {
+        "es": "Diplomado en Educación Superior",
+        "en": "Diploma in Higher Education"
+      },
+      "school": "Universidad Mayor de San Simón, Bolivia",
+      "period": "2019"
+    },
+    {
+      "title": {
+        "es": "Licenciatura en Ciencias de la Computación",
+        "en": "Bachelor's Degree in Computer Science"
+      },
+      "school": "Universidad Mayor de San Simón, Bolivia",
+      "period": "2016"
+    }
+  ],
+  "certifications": [
+    { "name": "ISO/IEC 27001 Lead Auditor", "issuer": "CertJoin", "year": "2021" },
+    { "name": "Lead Cybersecurity Professional Certificate", "issuer": "CertiProf", "year": "2020" }
+  ],
+  "languages": [
+    { "name": { "es": "Español", "en": "Spanish" }, "level": { "es": "Nativo", "en": "Native" } },
+    { "name": { "es": "Inglés", "en": "English" }, "level": { "es": "Avanzado", "en": "Advanced" } },
+    { "name": { "es": "Quechua", "en": "Quechua" }, "level": { "es": "Nativo", "en": "Native" } }
+  ],
+  "skills": [
+    {
+      "group": { "es": "Seguridad", "en": "Security" },
+      "items": ["Burp Suite", "OWASP ZAP", "SQLmap", "Veracode", "Fortify", "Rapid7", "Black Duck", "Qualys", "WIZ", "Snyk", "OWASP Top 10"]
+    },
+    {
+      "group": { "es": "Criptografía y cumplimiento", "en": "Cryptography and compliance" },
+      "items": ["ML-KEM", "ML-DSA", "HSM", "ISO 27001", "NIST", "ENS", "NIS2"]
+    },
+    {
+      "group": { "es": "Pruebas y automatización", "en": "Testing and automation" },
+      "items": ["Playwright", "Selenium", "Postman", "Pytest", "TestNG", "JUnit", "Cucumber", "Jasmine", "JMeter"]
+    },
+    {
+      "group": { "es": "Lenguajes", "en": "Languages" },
+      "items": ["Python", "Java", "JavaScript", "C", "C++", "SQL"]
+    },
+    {
+      "group": { "es": "DevOps y plataformas", "en": "DevOps and platforms" },
+      "items": ["GitHub", "Jenkins", "Docker", "Maven", "Cloudflare WAF", "Kali Linux", "Windows", "macOS"]
+    },
+    {
+      "group": { "es": "Accesibilidad", "en": "Accessibility" },
+      "items": ["WCAG", "JAWS", "ARC Toolkit", "WAVE", "Dragon"]
+    },
+    {
+      "group": { "es": "Gestión", "en": "Management" },
+      "items": ["Scrum", "Jira", "Confluence", "Power BI"]
+    }
+  ],
+  "featuredProjects": [
+    {
+      "tag": { "es": "TFM", "en": "Thesis" },
+      "title": {
+        "es": "SSDLC-F: seguridad en el ciclo de vida del software",
+        "en": "SSDLC-F: security across the software lifecycle"
+      },
+      "description": {
+        "es": "Pipeline en GitHub Actions con Semgrep, OWASP Dependency-Check, Gitleaks y OWASP ZAP sobre OWASP Juice Shop. Madurez medida con OWASP SAMM v2: de 18 a 51 puntos.",
+        "en": "GitHub Actions pipeline with Semgrep, OWASP Dependency-Check, Gitleaks and OWASP ZAP against OWASP Juice Shop. Maturity measured with OWASP SAMM v2: from 18 to 51 points."
+      },
+      "url": null
+    },
+    {
+      "tag": { "es": "Laboratorios", "en": "Labs" },
+      "title": {
+        "es": "Pentesting y defensa en laboratorio",
+        "en": "Pentesting and defence in the lab"
+      },
+      "description": {
+        "es": "Desbordamiento de búfer, pivoting con SSH y Meterpreter, OpenVPN sobre pfSense y análisis forense con Autopsy.",
+        "en": "Buffer overflow analysis, pivoting with SSH and Meterpreter, OpenVPN on pfSense and digital forensics with Autopsy."
+      },
+      "url": null
+    },
+    {
+      "tag": { "es": "Divulgación", "en": "Outreach" },
+      "title": {
+        "es": "Criptografía post-cuántica (ML-KEM)",
+        "en": "Post-quantum cryptography (ML-KEM)"
+      },
+      "description": {
+        "es": "Artículos y diagramas que explican ML-KEM y sus niveles de seguridad a equipos de ingeniería.",
+        "en": "Articles and diagrams explaining ML-KEM and its security levels to engineering teams."
+      },
+      "url": null
+    }
+  ],
+  "githubProjects": {
+    "user": "adalid07",
+    "topic": "portfolio",
+    "max": 6
+  }
+}

@@ -1,0 +1,18 @@
+---
+import profile from '../data/profile.json';
+import { ui, type Lang } from '../lib/i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = ui[lang];
+---
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <span>© {new Date().getFullYear()} {profile.fullName}</span>
+    <span>{t.footer}</span>
+  </div>
+</footer>

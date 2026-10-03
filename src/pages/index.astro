@@ -1,0 +1,27 @@
+---
+// Página raíz: elige el idioma según el navegador y redirige a /es/ o /en/.
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Adalid Claure G.</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href="/es/" />
+    <script is:inline>
+      var lang = (navigator.language || 'es').toLowerCase().indexOf('en') === 0 ? 'en' : 'es';
+      location.replace('/' + lang + '/');
+    </script>
+    <noscript><meta http-equiv="refresh" content="0; url=/es/" /></noscript>
+    <style>
+      body { margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center; gap: 24px; background: #0b1014; color: #e6edf3; font-family: system-ui, sans-serif; }
+      a { color: #5eead4; font-size: 1.125rem; padding: 12px; }
+    </style>
+  </head>
+  <body>
+    <a href="/es/">Español</a>
+    <a href="/en/">English</a>
+  </body>
+</html>

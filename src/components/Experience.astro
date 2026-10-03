@@ -1,0 +1,31 @@
+---
+import profile from '../data/profile.json';
+import { formatPeriod, ui, type Lang } from '../lib/i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = ui[lang];
+---
+
+<section id="experience" class="section">
+  <div class="container split">
+    <h2 class="section__title">{t.experienceTitle}</h2>
+    <ol class="timeline">
+      {
+        profile.experience.map((job) => (
+          <li class="timeline__item">
+            <p class="timeline__period">{formatPeriod(job.start, job.end, lang)}</p>
+            <h3 class="timeline__role">{job.role[lang]}</h3>
+            <p class="timeline__company">{job.company}</p>
+            <ul class="bullets">
+              {job.highlights[lang].map((h) => <li>{h}</li>)}
+            </ul>
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+</section>

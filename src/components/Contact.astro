@@ -1,0 +1,39 @@
+---
+import profile from '../data/profile.json';
+import { ui, type Lang } from '../lib/i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = ui[lang];
+const short = (url: string) => url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
+
+const links = [
+  { k: 'Email', v: profile.links.email, href: `mailto:${profile.links.email}` },
+  { k: 'LinkedIn', v: short(profile.links.linkedin), href: profile.links.linkedin },
+  { k: 'GitHub', v: short(profile.links.github), href: profile.links.github },
+];
+---
+
+<section id="contact" class="section">
+  <div class="container">
+    <div class="card contact">
+      <div class="contact__text">
+        <h2 class="contact__title">{t.contactTitle}</h2>
+        <p class="lead">{t.contactText}</p>
+      </div>
+      <div class="contact__links">
+        {
+          links.map((l) => (
+            <a class="link-row" href={l.href} rel="noopener">
+              <span class="link-row__k">{l.k}</span>
+              <span class="link-row__v">{l.v}</span>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

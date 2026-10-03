@@ -1,0 +1,47 @@
+---
+import '@fontsource-variable/manrope';
+import '@fontsource/jetbrains-mono/400.css';
+import '@fontsource/jetbrains-mono/500.css';
+import '../styles/global.css';
+import profile from '../data/profile.json';
+import { languages, ui, type Lang } from '../lib/i18n';
+
+interface Props {
+  lang: Lang;
+  title?: string;
+  description?: string;
+}
+
+const {
+  lang,
+  title = `${profile.name} · ${profile.headline[lang]}`,
+  description = profile.lead[lang],
+} = Astro.props;
+
+const t = ui[lang];
+const site = Astro.site ?? new URL('https://adalid07.github.io');
+const canonical = new URL(`/${lang}/`, site).href;
+---
+
+<!doctype html>
+<html lang={lang} style={`--accent: ${profile.accent}`}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark light" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {languages.map((l) => <link rel="alternate" hreflang={l} href={new URL(`/${l}/`, site).href} />)}
+    <link rel="alternate" hreflang="x-default" href={new URL('/es/', site).href} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:locale" content={lang === 'es' ? 'es_ES' : 'en_GB'} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">{t.skip}</a>
+    <slot />
+  </body>
+</html>
